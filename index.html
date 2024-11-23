@@ -7,6 +7,12 @@
                     width: 680px;
                     height: auto;
                 }
+
+                h1{
+                    
+                    color:red;
+                }
+
             </style>
         </head>
             <body>
@@ -14,6 +20,30 @@
                 <p>I think HTML is very demure</p>
 
                 <img src = "https://2056.ca/wp-content/uploads/2023/05/2023-2048x1781.png">
+
+                <blockquote>
+                    “If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.” ― Sun Tzu, The Art of War 
+                </blockquote>
+                <button onclick = "changeQuote()">Change Me</button>
+                <script> 
+                    var index = 0;
+
+                    function changeQuote(){
+                        var quotes = [
+                            `"Fin Fin Fin" - Traveski Scoot`,
+                            `"I hope they play Fein!" - Hammerhacks Organizers`,
+                            `“If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.” ― Sun Tzu, The Art of War `
+                        ];
+                        var blockquote = document.querySelector("blockquote");
+                        blockquote.innerHTML = quotes[index]
+
+                        index++
+
+                        if(index >= 3){
+                            index = 0;
+                        }
+                    }
+                </script>
             </body>
 
     </html>
